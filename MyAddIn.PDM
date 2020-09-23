@@ -1,0 +1,80 @@
+[Root]
+Most Recent Package=Procedure Addin
+
+
+[Package|Procedure Addin|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\Program Files\Microsoft Visual Studio\VB98\Insert Error Handler Adin\Package
+
+[Package|Procedure Addin|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Procedure Addin|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Procedure Addin|Files Found]
+
+[Package|Procedure Addin|Files Released]
+
+[Package|Procedure Addin|Missing Dependency Information]
+C:\Program Files\Microsoft Office\Office\MSO9.DLL=
+
+[Package|Procedure Addin|Out-of-Date Dependency Information]
+
+[Package|Procedure Addin|Files Added]
+
+[Package|Procedure Addin|Files Removed]
+
+[Package|Procedure Addin|Files In Project]
+C:\Program Files\Microsoft Visual Studio\VB98\Insert Error Handler Adin\AddProcedure.dll=Yes
+C:\WINNT\system32\msvbvm60.dll=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Program Files\Microsoft Office\Office\MSO9.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINNT\system32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Procedure Addin|Configure Registry Files]
+Applicable=No
+
+[Package|Procedure Addin|Configure Remote Servers]
+Applicable=No
+
+[Package|Procedure Addin|Install Locations]
+C:\Program Files\Microsoft Visual Studio\VB98\Insert Error Handler Adin\AddProcedure.dll=$(AppPath)
+C:\WINNT\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Office\Office\MSO9.DLL=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Procedure Addin|Configure Shared Files]
+Applicable=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Insert Error Handler Adin\AddProcedure.dll=No
+
+[Package|Procedure Addin|Distribution]
+Type=single
+Size=
+Title=Procedure Addin
+
+[Package|Procedure Addin|Package]
+PackageFolder=C:\Program Files\Microsoft Visual Studio\VB98\Insert Error Handler Adin\Package
+ProjectFolder=C:\Program Files\Microsoft Visual Studio\VB98\Insert Error Handler Adin
+ServerSideCab=
+File1=C:\Program Files\Microsoft Visual Studio\VB98\Insert Error Handler Adin\Package\setup.exe
+File2=C:\Program Files\Microsoft Visual Studio\VB98\Insert Error Handler Adin\Package\Setup.Lst
+File3=C:\Program Files\Microsoft Visual Studio\VB98\Insert Error Handler Adin\Package\AddProcedure.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

@@ -1,0 +1,208 @@
+'*** Variables ***
+Private Type udtwcrvs_alco0496
+    Code                      As String
+    Description               As String
+    PcUnit                    As String
+    TotalUnit                 As String
+    Days                      As String
+    BasicAnes                 As String
+    Grouper                   As String
+    TechUnitValue             As String
+    Mra                       As String
+End Type
+
+
+Private m_udtwcrvs_alco0496 As udtwcrvs_alco0496
+
+
+'*** Properties For This Class ***
+Public Property Get Code() As String
+	Code = m_udtwcrvs_alco0496.Code
+End Property
+
+Public Property Let Code(New_Code As String)
+	m_udtwcrvs_alco0496.Code = New_Code
+End Property
+
+Public Property Get Description() As String
+	Description = m_udtwcrvs_alco0496.Description
+End Property
+
+Public Property Let Description(New_Description As String)
+	m_udtwcrvs_alco0496.Description = New_Description
+End Property
+
+Public Property Get PcUnit() As String
+	PcUnit = m_udtwcrvs_alco0496.PcUnit
+End Property
+
+Public Property Let PcUnit(New_PcUnit As String)
+	m_udtwcrvs_alco0496.PcUnit = New_PcUnit
+End Property
+
+Public Property Get TotalUnit() As String
+	TotalUnit = m_udtwcrvs_alco0496.TotalUnit
+End Property
+
+Public Property Let TotalUnit(New_TotalUnit As String)
+	m_udtwcrvs_alco0496.TotalUnit = New_TotalUnit
+End Property
+
+Public Property Get Days() As String
+	Days = m_udtwcrvs_alco0496.Days
+End Property
+
+Public Property Let Days(New_Days As String)
+	m_udtwcrvs_alco0496.Days = New_Days
+End Property
+
+Public Property Get BasicAnes() As String
+	BasicAnes = m_udtwcrvs_alco0496.BasicAnes
+End Property
+
+Public Property Let BasicAnes(New_BasicAnes As String)
+	m_udtwcrvs_alco0496.BasicAnes = New_BasicAnes
+End Property
+
+Public Property Get Grouper() As String
+	Grouper = m_udtwcrvs_alco0496.Grouper
+End Property
+
+Public Property Let Grouper(New_Grouper As String)
+	m_udtwcrvs_alco0496.Grouper = New_Grouper
+End Property
+
+Public Property Get TechUnitValue() As String
+	TechUnitValue = m_udtwcrvs_alco0496.TechUnitValue
+End Property
+
+Public Property Let TechUnitValue(New_TechUnitValue As String)
+	m_udtwcrvs_alco0496.TechUnitValue = New_TechUnitValue
+End Property
+
+Public Property Get Mra() As String
+	Mra = m_udtwcrvs_alco0496.Mra
+End Property
+
+Public Property Let Mra(New_Mra As String)
+	m_udtwcrvs_alco0496.Mra = New_Mra
+End Property
+
+
+
+Public Function Fetch (cnn as String, sID as String, Optional sKey As String ) As Object
+
+
+	CONST PROCEDURE_NAME as String = "Fetch"
+	On Error Goto ErrHandler
+
+
+	Dim sSQL as String
+	Dim oADO as cADO
+	Dim rs as ADODB.Recordset
+	Dim NewObject as Object
+
+
+	sSQL = "SELECT * FROM wcrvs_alco0496"
+
+
+	Set oADO = New cADO
+	oADO.GetConnection ,cnn
+	Set rs = oADO.OpenRecordset(sSQL)
+
+
+
+
+	With rs
+
+
+		Do While Not .EOF
+			Set NewObject = New Object
+			m_udtwcrvs_alco0496.Code = .Fields("Code").Value & vbNullString
+			m_udtwcrvs_alco0496.Description = .Fields("Description").Value & vbNullString
+			m_udtwcrvs_alco0496.PcUnit = .Fields("PcUnit").Value & vbNullString
+			m_udtwcrvs_alco0496.TotalUnit = .Fields("TotalUnit").Value & vbNullString
+			m_udtwcrvs_alco0496.Days = .Fields("Days").Value & vbNullString
+			m_udtwcrvs_alco0496.BasicAnes = .Fields("BasicAnes").Value & vbNullString
+			m_udtwcrvs_alco0496.Grouper = .Fields("Grouper").Value & vbNullString
+			m_udtwcrvs_alco0496.TechUnitValue = .Fields("TechUnitValue").Value & vbNullString
+			m_udtwcrvs_alco0496.Mra = .Fields("Mra").Value & vbNullString
+
+
+			If Len(sKey) = 0 Then
+				mCol.Add NewObject
+			Else
+				mCol.Add NewObject, sKey
+			End If
+
+
+			'return the object created
+			Set Fetch = NewObject
+			Set NewObject = Nothing
+
+
+			.MoveNext
+
+
+		Loop
+	End With
+
+
+Procedure_Exit:
+	On Error Goto 0
+	Set rs = Nothing
+	Set oADO = Nothing
+	Exit Function
+ErrHandler:
+	Err.Raise Err.Number, PROCEDURE_NAME, Err.Description
+End Function
+
+
+
+
+'*** Assign Variables To Fields ***
+'Dim rs as a recordset or whatever is appropriate
+With rs
+.Fields("Code").Value = m_udtwcrvs_alco0496.Code
+.Fields("Description").Value = m_udtwcrvs_alco0496.Description
+.Fields("PcUnit").Value = m_udtwcrvs_alco0496.PcUnit
+.Fields("TotalUnit").Value = m_udtwcrvs_alco0496.TotalUnit
+.Fields("Days").Value = m_udtwcrvs_alco0496.Days
+.Fields("BasicAnes").Value = m_udtwcrvs_alco0496.BasicAnes
+.Fields("Grouper").Value = m_udtwcrvs_alco0496.Grouper
+.Fields("TechUnitValue").Value = m_udtwcrvs_alco0496.TechUnitValue
+.Fields("Mra").Value = m_udtwcrvs_alco0496.Mra
+End With
+
+
+
+
+'*** SQL Insert  ***
+Dim TABLE_NAME As String
+Dim sSQL As String
+
+TABLE_NAME = "wcrvs_alco0496"
+
+Const SP As String = "', '"
+
+ sSQL = "Insert Into " &  TABLE_NAME   & " (" &  _ 
+	"Code,Description,PcUnit,TotalUnit,Days," &  _
+	"BasicAnes,Grouper,TechUnitValue,Mra" &  _
+	") Values ('" &  _
+	 m_udtwcrvs_alco0496.Code & SP & m_udtwcrvs_alco0496.Description & SP & m_udtwcrvs_alco0496.PcUnit & SP & m_udtwcrvs_alco0496.TotalUnit & SP & m_udtwcrvs_alco0496.Days & SP &  _
+	 m_udtwcrvs_alco0496.BasicAnes & SP & m_udtwcrvs_alco0496.Grouper & SP & m_udtwcrvs_alco0496.TechUnitValue & SP & m_udtwcrvs_alco0496.Mra & "')"
+
+
+'*** SQL Update  ***
+Dim TABLE_NAME As String
+Dim sSQL As String
+
+TABLE_NAME = "wcrvs_alco0496"
+
+
+
+ sSQL = "Update " &  TABLE_NAME   & " Set " &  _ 
+	" Code = '" & m_udtwcrvs_alco0496.Code & "', Description = '" & m_udtwcrvs_alco0496.Description & "', PcUnit = '" & m_udtwcrvs_alco0496.PcUnit & "'," &  _
+	" TotalUnit = '" & m_udtwcrvs_alco0496.TotalUnit & "', Days = '" & m_udtwcrvs_alco0496.Days & "', BasicAnes = '" & m_udtwcrvs_alco0496.BasicAnes & "'," &  _
+	" Grouper = '" & m_udtwcrvs_alco0496.Grouper & "', TechUnitValue = '" & m_udtwcrvs_alco0496.TechUnitValue & "', Mra = '" & m_udtwcrvs_alco0496.Mra & "'" &  _
+	" Where {User ENTER Search key} ='"  & "{User Defines Variable Placed Here}" & "'"
